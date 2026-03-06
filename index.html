@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en"
-  <header>
+<html lang="en">
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Report — US Strikes on Iran (Sample Blog)</title>
 
-    <!-- Compiled Tailwind CSS -->
+    <!-- Locally compiled Tailwind CSS -->
     <link rel="stylesheet" href="dist/style.css" />
 
     <!-- Meta for social sharing -->
@@ -15,54 +15,91 @@
     />
   </head>
   <body
-    class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-100 antialiased"
+    class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-100 antialiased min-h-screen flex flex-col"
   >
     <!-- Header -->
-    <header class="bg-gray-950 border-b-4 border-red-600 shadow-2xl">
-      <div class="max-w-6xl mx-auto px-6 py-8 sm:py-12">
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
-          <div class="flex items-center gap-6">
-            <!-- simple flag motif -->
+    <header class="bg-gray-950 border-b-4 border-red-600 shadow-2xl relative z-50">
+      <div class="max-w-6xl mx-auto px-6 py-6 md:py-12">
+        <div class="flex items-center justify-between">
+          
+          <!-- Logo & Title -->
+          <div class="flex items-center gap-4 md:gap-6">
+            <!-- Simple flag motif -->
             <div
-              class="w-16 h-12 rounded-sm overflow-hidden border-2 border-gray-600 shadow-md"
+              class="w-12 h-9 md:w-16 md:h-12 rounded-sm overflow-hidden border-2 border-gray-600 shadow-md flex-shrink-0"
             >
               <div class="h-1/3 bg-red-600"></div>
               <div class="h-1/3 bg-white"></div>
               <div class="h-1/3 bg-emerald-600"></div>
             </div>
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold text-white">
+            <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold text-white tracking-tight">
               Field Reports
             </h1>
           </div>
 
-          <nav class="text-lg text-gray-300 flex flex-col sm:flex-row gap-2 sm:gap-3">
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex text-lg text-gray-300 space-x-3">
             <a
-              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded transition font-semibold text-center"
+              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded-lg transition font-semibold"
               href="#"
               >Home</a
             >
             <a
-              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded transition font-semibold text-center"
+              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded-lg transition font-semibold"
               href="#"
               >Timeline</a
             >
             <a
-              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded transition font-semibold text-center"
+              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded-lg transition font-semibold"
               href="#"
               >Sources</a
             >
           </nav>
+
+          <!-- Mobile Hamburger Button -->
+          <button 
+            id="mobile-menu-button" 
+            class="md:hidden p-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-gray-600"
+            aria-label="Toggle mobile menu"
+          >
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
         </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <nav id="mobile-menu" class="hidden md:hidden mt-4 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg">
+          <div class="flex flex-col py-2">
+            <a
+              class="px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-700 transition font-semibold border-b border-gray-700/50"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-700 transition font-semibold border-b border-gray-700/50"
+              href="#"
+              >Timeline</a
+            >
+            <a
+              class="px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-700 transition font-semibold"
+              href="#"
+              >Sources</a
+            >
+          </div>
+        </nav>
       </div>
     </header>
 
-    <!-- Hero -->
-    <main class="max-w-5xl mx-auto px-6">
-      <section class="bg-gray-850/60 rounded-2xl p-6 mb-8 shadow-lg">
-        <h2 class="text-3xl font-bold mb-2">
+    <!-- Main Content -->
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-8">
+      
+      <!-- Hero Section -->
+      <section class="bg-gray-800/60 border border-gray-700/50 rounded-2xl p-6 md:p-8 mb-8 shadow-lg backdrop-blur-sm">
+        <h2 class="text-2xl md:text-3xl font-bold mb-3 text-white">
           US Strikes on Iran — Reporting Hub
         </h2>
-        <p class="text-lg text-gray-300">
+        <p class="text-base md:text-lg text-gray-300 leading-relaxed">
           Neutral, sourced reporting cards. Replace placeholder images in
           <code>assets/</code> with licensed newsroom photos or your own photos.
           Include a short caption describing what the image shows and credit the
@@ -72,25 +109,27 @@
 
       <!-- Cards grid -->
       <section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-12">
-        <article class="bg-gray-800 rounded-xl overflow-hidden shadow-md">
+        <!-- Card 1 -->
+        <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+          <!-- Replaced with unsplash placeholder for demonstration -->
           <img
-            src="assets/Pic1.webp"
+            src="https://images.unsplash.com/photo-1541888031341-eb1287114227?auto=format&fit=crop&q=80&w=600&h=400"
             alt="Smoke rising over a city after an explosion"
             class="w-full h-48 object-cover"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23374151\'/><text x=\'50%\' y=\'50%\' fill=\'%239CA3AF\' text-anchor=\'middle\' dominant-baseline=\'middle\'>Placeholder Image</text></svg>'"
           />
-          <div class="p-4">
-            <h3 class="font-semibold text-xl mb-1">Explosion near downtown</h3>
-            <p class="text-base text-gray-300 mb-3">
+          <div class="p-5 flex flex-col flex-grow">
+            <h3 class="font-bold text-xl mb-2 text-white">Explosion near downtown</h3>
+            <p class="text-base text-gray-300 mb-4 flex-grow">
               Smoke rises above buildings after an air strike; emergency
               services move toward the scene.
             </p>
 
-            <!-- source/credit block (visible on each card) -->
-            <div class="text-sm text-gray-400">
+            <div class="text-sm text-gray-400 mt-auto pt-4 border-t border-gray-700">
               <strong>Credit:</strong> Photographer / Agency —
               <a
-                class="underline text-gray-200"
-                href="https://www.reutersconnect.com/item/smoke-rises-following-an-explosion-after-israel-and-the-us-launched-strikes-on-iran-in-tehran/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX1JDMkNXSkFNWEFTTw"
+                class="text-blue-400 hover:text-blue-300 underline transition-colors"
+                href="#"
                 target="_blank"
                 rel="noreferrer"
                 >Source link</a
@@ -99,24 +138,25 @@
           </div>
         </article>
 
-        <article class="bg-gray-800 rounded-xl overflow-hidden shadow-md">
+        <!-- Card 2 -->
+        <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col">
           <img
-            src="assets/Pic2.webp"
+            src="https://images.unsplash.com/photo-1590059508931-10332e7834bc?auto=format&fit=crop&q=80&w=600&h=400"
             alt="Damaged building facade"
             class="w-full h-48 object-cover"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23374151\'/><text x=\'50%\' y=\'50%\' fill=\'%239CA3AF\' text-anchor=\'middle\' dominant-baseline=\'middle\'>Placeholder Image</text></svg>'"
           />
-          <div class="p-4">
-            <h3 class="font-semibold text-xl mb-1">Damage to infrastructure</h3>
-            <p class="text-base text-gray-300 mb-3">
+          <div class="p-5 flex flex-col flex-grow">
+            <h3 class="font-bold text-xl mb-2 text-white">Damage to infrastructure</h3>
+            <p class="text-base text-gray-300 mb-4 flex-grow">
               Damaged structures and rubble in Tehran following US and Israeli
-              strikes, showing the impact on infrastructure. — Majid
-              Asgaripour/WANA via Reuters
+              strikes, showing the impact on infrastructure.
             </p>
-            <div class="text-sm text-gray-400">
-              <strong>Credit:</strong> Photographer / Agency —
+            <div class="text-sm text-gray-400 mt-auto pt-4 border-t border-gray-700">
+              <strong>Credit:</strong> Majid Asgaripour/WANA —
               <a
-                class="underline text-gray-200"
-                href="https://www.aljazeera.com/tag/infrastructure/"
+                class="text-blue-400 hover:text-blue-300 underline transition-colors"
+                href="#"
                 target="_blank"
                 rel="noreferrer"
                 >Source link</a
@@ -125,24 +165,25 @@
           </div>
         </article>
 
-        <article class="bg-gray-800 rounded-xl overflow-hidden shadow-md">
+        <!-- Card 3 -->
+        <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col sm:col-span-2 lg:col-span-1">
           <img
-            src="assets/Pic3.jpg"
+            src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=600&h=400"
             alt="Crowds and demonstrations"
             class="w-full h-48 object-cover"
+            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23374151\'/><text x=\'50%\' y=\'50%\' fill=\'%239CA3AF\' text-anchor=\'middle\' dominant-baseline=\'middle\'>Placeholder Image</text></svg>'"
           />
-          <div class="p-4">
-            <h3 class="font-semibold text-xl mb-1">Public reaction</h3>
-            <p class="text-base text-gray-300 mb-3">
+          <div class="p-5 flex flex-col flex-grow">
+            <h3 class="font-bold text-xl mb-2 text-white">Public reaction</h3>
+            <p class="text-base text-gray-300 mb-4 flex-grow">
               Citizens gather in Tehran during a public demonstration,
-              reflecting the emotional and political response of the population
-              following escalating tensions and military actions.
+              reflecting the emotional and political response of the population.
             </p>
-            <div class="text-sm text-gray-400">
+            <div class="text-sm text-gray-400 mt-auto pt-4 border-t border-gray-700">
               <strong>Credit:</strong> Photographer / Agency —
               <a
-                class="underline text-gray-200"
-                href="https://www.amnesty.org/en/latest/campaigns/2026/01/what-happened-at-the-protests-in-iran/"
+                class="text-blue-400 hover:text-blue-300 underline transition-colors"
+                href="#"
                 target="_blank"
                 rel="noreferrer"
                 >Source link</a
@@ -154,31 +195,31 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 border-t-4 border-red-600 shadow-2xl mt-16">
-      <div class="max-w-6xl mx-auto px-6 py-12">
-        <div class="flex items-center justify-center gap-4 mb-6">
-          <!-- Iranian flag motif -->
-          <div
-            class="w-16 h-12 rounded-sm overflow-hidden border-2 border-gray-600 shadow-md"
-          >
-            <div class="h-1/3 bg-red-600"></div>
-            <div class="h-1/3 bg-white"></div>
-            <div class="h-1/3 bg-emerald-600"></div>
-          </div>
-        </div>
-        <div
-          class="border-t border-gray-700 pt-3 text-center text-gray-400 text-base"
-        >
-          <p>&copy; 2026 Field Reports.</p>
+    <footer class="bg-gray-950 border-t-4 border-red-600 shadow-2xl mt-auto">
+      <div class="max-w-6xl mx-auto px-6 py-8">
+        <div class="text-center text-gray-400 text-sm md:text-base">
+          <p>
+            &copy; 2026 Field Reports. Template for reporting and study. Replace
+            placeholders and add full source credits for each image.
+          </p>
         </div>
       </div>
     </footer>
-  </body>
-</html>
-</p>
-      </div>
-    </div>
-  </footer>
 
-</body>
+    <!-- Interactive Script for Hamburger Menu -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+          // Toggle the hidden class to show/hide the menu
+          mobileMenu.classList.toggle('hidden');
+          
+          // Optional: Add a smooth fade-in effect by toggling opacity/translate classes if desired,
+          // but basic toggle works well for this use case.
+        });
+      });
+    </script>
+  </body>
 </html>
