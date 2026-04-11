@@ -2,221 +2,244 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Report — US Strikes on Iran (Sample Blog)</title>
-
-    <!-- Local Tailwind CSS -->
-    <link rel="stylesheet" href="/Tailwind-Local2/dist/style.css" />
-
-    <!-- Meta for social sharing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeff G. Baquiran - Portfolio</title>
     <meta
       name="description"
-      content="A neutral, source-linked blog layout for reporting on recent strikes and events. Replace placeholder images with licensed photos and add clear captions/credits."
+      content="Portfolio for Jeff G. Baquiran, a 3rd-year BS Information Systems student focused on web development and system workflows."
     />
+    <link rel="stylesheet" href="./dist/style.css" />
   </head>
-  <body
-    class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-gray-100 antialiased min-h-screen flex flex-col"
-  >
-    <!-- Header -->
-    <header class="bg-gray-950 border-b-4 border-red-600 shadow-2xl relative z-50">
-      <div class="max-w-6xl mx-auto px-6 py-6 md:py-12">
-        <div class="flex items-center justify-between">
-          
-          <!-- Logo & Title -->
-          <div class="flex items-center gap-4 md:gap-6">
-            <!-- Simple flag motif -->
-            <div
-              class="w-12 h-9 md:w-16 md:h-12 rounded-sm overflow-hidden border-2 border-gray-600 shadow-md flex-shrink-0"
-            >
-              <div class="h-1/3 bg-red-600"></div>
-              <div class="h-1/3 bg-white"></div>
-              <div class="h-1/3 bg-emerald-600"></div>
-            </div>
-            <h1 class="text-3xl sm:text-5xl md:text-7xl font-bold text-white tracking-tight">
-              Field Reports
-            </h1>
+  <body class="bg-stone-50 text-stone-900 min-h-screen antialiased flex flex-col">
+    <header class="bg-white/90 border-b border-stone-200 shadow-sm sticky top-0 z-50 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#C3B091] text-white font-bold text-lg shadow-md">
+            JB
           </div>
-
-          <!-- Desktop Navigation -->
-          <nav class="hidden md:flex text-lg text-gray-300 space-x-3">
-            <a
-              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded-lg transition font-semibold"
-              href="#"
-              >Home</a
-            >
-            <a
-              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded-lg transition font-semibold"
-              href="#"
-              >Timeline</a
-            >
-            <a
-              class="px-5 py-3 hover:text-white hover:bg-gray-800 rounded-lg transition font-semibold"
-              href="#"
-              >Sources</a
-            >
-          </nav>
-
-          <!-- Mobile Hamburger Button -->
-          <button 
-            id="mobile-menu-button" 
-            class="md:hidden p-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-gray-600"
-            aria-label="Toggle mobile menu"
-          >
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
+          <div>
+            <p class="text-sm uppercase tracking-[0.24em] text-stone-500">Portfolio</p>
+            <h1 class="text-xl font-semibold">Jeff G. Baquiran</h1>
+          </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <nav id="mobile-menu" class="hidden md:hidden mt-4 bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg">
-          <div class="flex flex-col py-2">
-            <a
-              class="px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-700 transition font-semibold border-b border-gray-700/50"
-              href="#"
-              >Home</a
-            >
-            <a
-              class="px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-700 transition font-semibold border-b border-gray-700/50"
-              href="#"
-              >Timeline</a
-            >
-            <a
-              class="px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-700 transition font-semibold"
-              href="#"
-              >Sources</a
-            >
-          </div>
+        <nav class="hidden md:flex items-center gap-4 text-sm font-medium text-stone-700">
+          <a href="#home" class="hover:text-[#C3B091] transition">Home</a>
+          <a href="#about" class="hover:text-[#C3B091] transition">About</a>
+          <a href="#certificates" class="hover:text-[#C3B091] transition">Certificates</a>
         </nav>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden inline-flex items-center justify-center rounded-lg border border-stone-300 bg-white p-2 text-stone-700 shadow-sm transition hover:bg-stone-100 focus:outline-none focus:ring-2 focus:ring-[#C3B091]"
+          aria-label="Open navigation menu"
+        >
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
       </div>
+
+      <nav id="mobile-menu" class="hidden bg-white border-t border-stone-200 shadow-sm md:hidden">
+        <div class="max-w-6xl mx-auto flex flex-col px-6 py-4 gap-2">
+          <a href="#home" class="rounded-xl px-4 py-3 text-stone-700 hover:bg-stone-100">Home</a>
+          <a href="#about" class="rounded-xl px-4 py-3 text-stone-700 hover:bg-stone-100">About</a>
+          <a href="#certificates" class="rounded-xl px-4 py-3 text-stone-700 hover:bg-stone-100">Certificates</a>
+        </div>
+      </nav>
     </header>
 
-    <!-- Main Content -->
-    <main class="flex-grow max-w-5xl mx-auto px-6 py-8">
-      
-      <!-- Hero Section -->
-      <section class="bg-gray-800/60 border border-gray-700/50 rounded-2xl p-6 md:p-8 mb-8 shadow-lg backdrop-blur-sm">
-        <h2 class="text-2xl md:text-3xl font-bold mb-3 text-white">
-          US Strikes on Iran — Reporting Hub
-        </h2>
-        <p class="text-base md:text-lg text-gray-300 leading-relaxed">
-          Neutral, sourced reporting cards. Replace placeholder images in
-          <code>assets/</code> with licensed newsroom photos or your own photos.
-          Include a short caption describing what the image shows and credit the
-          photographer or agency.
-        </p>
+    <main class="flex-grow">
+      <section id="home" class="max-w-6xl mx-auto px-6 py-10 sm:py-14">
+        <div class="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-center">
+          <div class="rounded-[2rem] border border-stone-200 bg-white p-8 shadow-sm">
+            <span class="inline-flex rounded-full bg-[#C3B091]/15 px-4 py-2 text-sm font-semibold text-[#8c775e]">3rd-year BS Information Systems</span>
+            <h2 class="mt-6 text-3xl font-semibold tracking-tight text-stone-900 sm:text-4xl">Building accessible web experiences and efficient system workflows.</h2>
+            <p class="mt-5 text-base leading-8 text-stone-600">I design clean digital interfaces and streamline system processes through thoughtful development, semantic HTML, responsive design, and practical automation.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <span class="rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-700">Web Development</span>
+              <span class="rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-700">System Workflow Design</span>
+              <span class="rounded-full border border-stone-200 bg-stone-50 px-4 py-2 text-sm text-stone-700">Responsive Interfaces</span>
+            </div>
+          </div>
+
+          <div class="rounded-[2rem] border border-stone-200 bg-[#F6F2EB] p-8 shadow-sm">
+            <h3 class="text-xl font-semibold text-stone-900">Selected strengths</h3>
+            <ul class="mt-6 space-y-4 text-stone-700">
+              <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#C3B091]"></span>Semantic document structure and accessible component layouts</li>
+              <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#C3B091]"></span>Responsive page design optimized for mobile and desktop</li>
+              <li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#C3B091]"></span>Interactive front-end behavior with vanilla JavaScript</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <!-- Cards grid -->
-      <section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mb-12">
-        <!-- Card 1 -->
-        <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col">
-          <!-- Replaced with unsplash placeholder for demonstration -->
-          <img
-            src="assets/Pic1.webp"
-            alt="Smoke rising over a city after an explosion"
-            class="w-full h-48 object-cover"
-            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23374151\'/><text x=\'50%\' y=\'50%\' fill=\'%239CA3AF\' text-anchor=\'middle\' dominant-baseline=\'middle\'>Placeholder Image</text></svg>'"
-          />
-          <div class="p-5 flex flex-col flex-grow">
-            <h3 class="font-bold text-xl mb-2 text-white">Explosion near downtown</h3>
-            <p class="text-base text-gray-300 mb-4 flex-grow">
-              Smoke rises above buildings after an air strike; emergency
-              services move toward the scene.
-            </p>
-
-            <div class="text-sm text-gray-400 mt-auto pt-4 border-t border-gray-700">
-              <strong>Credit:</strong> Reuters —
-              <a
-                class="text-blue-400 hover:text-blue-300 underline transition-colors"
-                href="https://www.reuters.com/"
-                target="_blank"
-                rel="noreferrer"
-                >Source link</a
-              >
+      <section id="about" class="border-y border-stone-200 bg-white py-10 px-6 sm:py-14">
+        <div class="max-w-6xl mx-auto">
+          <div class="grid gap-8 lg:grid-cols-[0.9fr_0.7fr] items-center">
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-stone-500">About Jeff</p>
+              <h3 class="mt-4 text-2xl font-semibold text-stone-900">A student with a practical focus on digital systems and user-centered pages.</h3>
+              <p class="mt-4 text-stone-600 leading-8">Jeff combines academic knowledge in information systems with hands-on practice in building website layouts, workflows, and simple JavaScript-driven tools. His goal is to make interfaces feel calm, functional, and intuitive.</p>
+            </div>
+            <div class="rounded-[1.75rem] bg-[#F9F5EB] p-8 shadow-sm">
+              <p class="text-sm font-semibold uppercase tracking-[0.22em] text-[#8c775e]">Focus areas</p>
+              <ul class="mt-6 space-y-4 text-stone-700">
+                <li>Front-end HTML, CSS, JavaScript</li>
+                <li>System process mapping</li>
+                <li>Responsive and mobile-first design</li>
+                <li>Clean visual hierarchy</li>
+              </ul>
             </div>
           </div>
-        </article>
+        </div>
+      </section>
 
-        <!-- Card 2 -->
-        <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col">
-          <img
-            src="assets/Pic2.webp"
-            alt="Damaged building facade"
-            class="w-full h-48 object-cover"
-            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23374151\'/><text x=\'50%\' y=\'50%\' fill=\'%239CA3AF\' text-anchor=\'middle\' dominant-baseline=\'middle\'>Placeholder Image</text></svg>'"
-          />
-          <div class="p-5 flex flex-col flex-grow">
-            <h3 class="font-bold text-xl mb-2 text-white">Damage to infrastructure</h3>
-            <p class="text-base text-gray-300 mb-4 flex-grow">
-              Damaged structures and rubble in Tehran following US and Israeli
-              strikes, showing the impact on infrastructure.
-            </p>
-            <div class="text-sm text-gray-400 mt-auto pt-4 border-t border-gray-700">
-              <strong>Credit:</strong> Majid Asgaripour/WANA —
-              <a
-                class="text-blue-400 hover:text-blue-300 underline transition-colors"
-                href="https://wanaen.com/12-days-of-war-widespread-damage-and-grave-violations-of-international-law-in-iran/"
-                target="_blank"
-                rel="noreferrer"
-                >Source link</a
-              >
-            </div>
-          </div>
-        </article>
+      <section id="certificates" class="max-w-6xl mx-auto px-6 py-10 sm:py-14">
+        <div class="mb-8">
+          <p class="text-sm uppercase tracking-[0.3em] text-stone-500">Certificates</p>
+          <h2 class="mt-3 text-3xl font-semibold text-stone-900">SoloLearn achievements</h2>
+          <p class="mt-3 text-stone-600 max-w-2xl leading-7">Each certificate below opens a brief overview of the skill built through focused practice on web fundamentals.</p>
+        </div>
 
-        <!-- Card 3 -->
-        <article class="bg-gray-800 border border-gray-700 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 flex flex-col sm:col-span-2 lg:col-span-1">
-          <img
-            src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=600&h=400"
-            alt="Crowds and demonstrations"
-            class="w-full h-48 object-cover"
-            onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23374151\'/><text x=\'50%\' y=\'50%\' fill=\'%239CA3AF\' text-anchor=\'middle\' dominant-baseline=\'middle\'>Placeholder Image</text></svg>'"
-          />
-          <div class="p-5 flex flex-col flex-grow">
-            <h3 class="font-bold text-xl mb-2 text-white">Public reaction</h3>
-            <p class="text-base text-gray-300 mb-4 flex-grow">
-              Citizens gather in Tehran during a public demonstration,
-              reflecting the emotional and political response of the population.
-            </p>
-            <div class="text-sm text-gray-400 mt-auto pt-4 border-t border-gray-700">
-              <strong>Credit:</strong> Unsplash —
-              <a
-                class="text-blue-400 hover:text-blue-300 underline transition-colors"
-                href="https://unsplash.com/photos/people-in-auditorium-Z5DUc7YRu0o"
-                target="_blank"
-                rel="noreferrer"
-                >Source link</a
-              >
+        <div class="grid gap-6 md:grid-cols-3">
+          <article data-certificate="html" tabindex="0" class="cursor-pointer rounded-[1.75rem] border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#C3B091] overflow-hidden" aria-label="Open HTML certificate details">
+            <img src="assets/html.jpg" alt="HTML Fundamentals Certificate" class="block w-full h-auto max-h-[30rem] rounded-t-[1.75rem] bg-stone-50 object-contain" />
+            <div class="p-6">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#C3B091]">Certificate</p>
+                <h3 class="mt-3 text-xl font-semibold text-stone-900">HTML Fundamentals</h3>
+              </div>
+              <span class="inline-flex rounded-full bg-[#C3B091]/15 px-3 py-1 text-sm font-semibold text-[#8c775e]">Click for details</span>
             </div>
-          </div>
-        </article>
+            <p class="mt-5 text-stone-600 leading-7">Core concepts for semantic structure and accessible page layouts.</p>
+            </div>
+          </article>
+
+          <article data-certificate="css" tabindex="0" class="cursor-pointer rounded-[1.75rem] border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#C3B091] overflow-hidden" aria-label="Open CSS certificate details">
+            <img src="assets/CSS.jpg" alt="CSS Essentials Certificate" class="block w-full h-auto max-h-[30rem] rounded-t-[1.75rem] bg-stone-50 object-contain" />
+            <div class="p-6">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#C3B091]">Certificate</p>
+                <h3 class="mt-3 text-xl font-semibold text-stone-900">CSS Essentials</h3>
+              </div>
+              <span class="inline-flex rounded-full bg-[#C3B091]/15 px-3 py-1 text-sm font-semibold text-[#8c775e]">Click for details</span>
+            </div>
+            <p class="mt-5 text-stone-600 leading-7">Responsive layouts, visual styling, and design consistency for modern interfaces.</p>
+            </div>
+          </article>
+
+          <article data-certificate="javascript" tabindex="0" class="cursor-pointer rounded-[1.75rem] border border-stone-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#C3B091] overflow-hidden" aria-label="Open JavaScript certificate details">
+            <img src="assets/JS.png" alt="JavaScript Basics Certificate" class="block w-full h-auto max-h-[30rem] rounded-t-[1.75rem] bg-stone-50 object-contain" />
+            <div class="p-6">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[#C3B091]">Certificate</p>
+                <h3 class="mt-3 text-xl font-semibold text-stone-900">JavaScript Basics</h3>
+              </div>
+              <span class="inline-flex rounded-full bg-[#C3B091]/15 px-3 py-1 text-sm font-semibold text-[#8c775e]">Click for details</span>
+            </div>
+            <p class="mt-5 text-stone-600 leading-7">Interactive page behavior, DOM updates, and scripting page workflows.</p>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-950 border-t-4 border-red-600 shadow-2xl mt-auto">
-      <div class="max-w-6xl mx-auto px-6 py-8">
-        <div class="text-center text-gray-400 text-sm md:text-base">
-          <p>
-            &copy; 2026 Field Reports.
-          </p>
-        </div>
+    <footer class="border-t border-stone-200 bg-white py-8">
+      <div class="max-w-6xl mx-auto px-6 text-center text-sm text-stone-500">
+        &copy; 2026 Jeff G. Baquiran. Designed with a minimalist khaki palette.
       </div>
     </footer>
 
-    <!-- Interactive Script for Hamburger Menu -->
+    <div id="certificate-modal" class="fixed inset-0 hidden flex items-center justify-center bg-black/40 px-4 py-6 md:px-8">
+      <div class="relative w-full max-w-2xl overflow-hidden rounded-[2rem] border border-stone-200 bg-white p-6 shadow-2xl sm:p-8">
+        <button id="modal-close" class="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-stone-100 text-stone-600 transition hover:bg-stone-200 focus:outline-none focus:ring-2 focus:ring-[#C3B091]" aria-label="Close certificate details">
+          <span class="text-xl font-bold">&times;</span>
+        </button>
+        <div class="mb-6">
+          <p class="text-sm uppercase tracking-[0.3em] text-[#C3B091]">Certificate details</p>
+          <h2 id="modal-title" class="mt-4 text-2xl font-semibold text-stone-900"></h2>
+          <p id="modal-description" class="mt-4 text-stone-600 leading-8"></p>
+        </div>
+        <div>
+          <h3 class="text-base font-semibold text-stone-900">Topics learned</h3>
+          <ul id="modal-topics" class="mt-4 space-y-3 text-stone-700"></ul>
+        </div>
+      </div>
+    </div>
+
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const modal = document.getElementById('certificate-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalTopics = document.getElementById('modal-topics');
+        const modalClose = document.getElementById('modal-close');
+
+        const certificates = {
+          html: {
+            title: 'HTML Fundamentals',
+            description: 'Learned the building blocks of semantic web structure, content hierarchy, and accessible markup for modern pages.',
+            topics: ['Semantic structure and sectioning', 'Accessible headings and labels', 'Organized content hierarchy'],
+          },
+          css: {
+            title: 'CSS Essentials',
+            description: 'Practiced responsive styling, layout systems, and visual polish for calm, cohesive interfaces.',
+            topics: ['Responsive layouts and grid systems', 'Spacing, typography, and color use', 'Component styling with clean classes'],
+          },
+          javascript: {
+            title: 'JavaScript Basics',
+            description: 'Built interactive behaviors with vanilla JavaScript, manipulating the DOM and responding to user events.',
+            topics: ['DOM manipulation and event handling', 'Reusable functions and state updates', 'Interactive page behavior'],
+          },
+        };
+
+        function openModal(type) {
+          const certificate = certificates[type];
+          if (!certificate) return;
+          modalTitle.textContent = certificate.title;
+          modalDescription.textContent = certificate.description;
+          modalTopics.innerHTML = certificate.topics.map(topic => `<li class="flex items-start gap-3"><span class="mt-1 inline-flex h-2.5 w-2.5 rounded-full bg-[#C3B091]"></span>${topic}</li>`).join('');
+          modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+          modal.classList.add('hidden');
+        }
 
         mobileMenuButton.addEventListener('click', () => {
-          // Toggle the hidden class to show/hide the menu
           mobileMenu.classList.toggle('hidden');
-          
-          // Optional: Add a smooth fade-in effect by toggling opacity/translate classes if desired,
-          // but basic toggle works well for this use case.
+        });
+
+        document.querySelectorAll('[data-certificate]').forEach(card => {
+          card.addEventListener('click', () => {
+            openModal(card.dataset.certificate);
+          });
+          card.addEventListener('keydown', event => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              openModal(card.dataset.certificate);
+            }
+          });
+        });
+
+        modalClose.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', event => {
+          if (event.target === modal) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener('keydown', event => {
+          if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+          }
         });
       });
     </script>
